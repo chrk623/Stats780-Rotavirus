@@ -2,7 +2,6 @@
 	ODS RTF file = "&by..rtf";
 	ODS ESCAPECHAR = "&escapeChar";
 
-	/* Years */
 	DATA toOutput;
 		SET &tableOfRates (KEEP = DenomType DenomSubTypeLabel Event RateString);
 	PROC SORT data = toOutput;

@@ -232,7 +232,7 @@
 			IF -42 =< DevFrm_3Months =< 42 THEN vaccineTwo = 1;
 
 			/*
-				Label a NIR entry as the third vaccination if it is third vaccination at 5 months +/- 6 weeks.
+				Label a NIR entry as the third vaccination if it is at 5 months +/- 6 weeks.
 			*/
 			IF -42 =< DevFrm_5Months =< 42 THEN vaccineThree = 1;
 
@@ -358,7 +358,7 @@
 		END;
 
 		/*
-			Increment SEQ_ID. This is variable will be used in the PROC SQL styled tranpose.
+			Increment SEQ_ID. This is variable will be used in the PROC SQL styled transpose.
 		*/
 		SEQ_ID + 1;
 

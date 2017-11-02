@@ -100,7 +100,7 @@
 		FROM &NMDS_events_file;
 
 		/* 
-			Merge the NMDS_Event table onto the NHI table by &primaryKey. Note that we only select unique NMDS_Event entires 
+			Merge the NMDS_Event table onto the NHI table by &primaryKey. Note that we only select unique NMDS_Event entries 
 			from the merged table. The type of merge is a LEFT JOIN and the WHERE part of the call ensures that 
 			we will only select NMDS_Event entries for &primaryKeys in the NHI table.
 		*/
@@ -161,7 +161,7 @@
 		WHERE NOT(&icdCode IN &rotavirusCodes OR &icdCode IN &intussusceptionCodes OR &icdCode IN &bronchiolitisCodes);
 
 		/* 
-			Merge the NMDS_Diag table onto the NMDS_Base table by &eventId. Note that we only select unique NMDS_Diag entires 
+			Merge the NMDS_Diag table onto the NMDS_Base table by &eventId. Note that we only select unique NMDS_Diag entries 
 			from the merged table. The type of merge is a LEFT JOIN and the WHERE part of the call ensures that 
 			we will only select NMDS_Diag entries for &primaryKeys in the NMDS_Base table.
 		*/
@@ -259,7 +259,7 @@
 			event = &bronchiolitisLabel;
 
 		/*
-			Increment SEQ_ID. This is variable will be used in the PROC SQL styled tranpose.
+			Increment SEQ_ID. This is variable will be used in the PROC SQL styled transpose.
 		*/
 		SEQ_ID + 1;
 
@@ -332,7 +332,7 @@
 		/*
 			Remove the following tables because they are not needed the rest of the module.
 		*/
-		DROP TABLE /*NMDS_Complete,*/ RVirus_numOfEntries;
+		DROP TABLE NMDS_Complete, RVirus_numOfEntries;
 	QUIT;
 
 	/*
